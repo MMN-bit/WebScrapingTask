@@ -7,6 +7,11 @@ public class Product
     public string? Rating { get; set; } 
    
 }
+public class Urls
+{
+    public string? Url { get; set; }
+} 
+
 
 class Scrape
 	{ 
