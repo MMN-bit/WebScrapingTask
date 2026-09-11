@@ -28,7 +28,7 @@ class ScrapeP
             {   
                 var name = HtmlEntity.DeEntitize(productElement.QuerySelector("img").Attributes["alt"]?.Value);
                 var price = HtmlEntity.DeEntitize(productElement.QuerySelector("span.dollars").InnerText) +  HtmlEntity.DeEntitize(productElement.QuerySelector("span.cents").InnerText) ;
-                var rating = HtmlEntity.DeEntitize(productElement.QuerySelector("div.item")?.Attributes["rating"]?.Value);
+                var rating = productElement.Attributes["rating"]?.Value;
                 var url = HtmlEntity.DeEntitize(productElement.QuerySelector("a")?.Attributes["href"]?.Value);
                 Double.TryParse(rating, out double normalize);
                 // Math equation to normalize the rating
