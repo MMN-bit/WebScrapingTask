@@ -20,15 +20,13 @@ class Scrape
             var document = new HtmlDocument();
             document.Load("test.html");
             var products = new List<Product>();
-            var souldout = new List<Product>();
-            var urls = new List<Urls>();
             var productHTMLElements = document.DocumentNode.QuerySelectorAll("div.item");
  
 			foreach(var productElement in productHTMLElements)
             {   
                 var name = HtmlEntity.DeEntitize(productElement.QuerySelector("img").Attributes["alt"]?.Value);
                 var price = HtmlEntity.DeEntitize(productElement.QuerySelector("span.dollars").InnerText) +  HtmlEntity.DeEntitize(productElement.QuerySelector("span.cents").InnerText) ;
-                var rating = HtmlEntity.DeEntitize(productElement.QuerySelector("div.item")?.Attributes["rating"]?.Value);
+                var rating = productElement.Attributes["rating"]?.Value;
                 var url = HtmlEntity.DeEntitize(productElement.QuerySelector("a")?.Attributes["href"]?.Value);
                 Double.TryParse(rating, out double normalize);
                 // Math equation to normalize the rating
@@ -43,11 +41,6 @@ class Scrape
                     Price = price,
                     Rating = rating,
                 
-                });
-
-                urls.Add(new Urls
-                {
-                    Url = url
                 });
             }
 
