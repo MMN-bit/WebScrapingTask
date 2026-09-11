@@ -54,7 +54,7 @@ class Scrape
             Console.WriteLine("Products:");
             foreach(var product in products)
             {
-                Console.WriteLine($"name: {product.Name},{Environment.NewLine}price: {product.Price},{Environment.NewLine}rating: {product.Rating},{Environment.NewLine}");
+                Console.WriteLine($"name: {product.Name},{Environment.NewLine}price: {product.Price},{Environment.NewLine}rating: {product.Rating}{Environment.NewLine}");
             }
             
 		} 
