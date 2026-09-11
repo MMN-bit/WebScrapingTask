@@ -16,3 +16,4 @@ C:\Users\Asus\Desktop\Test\bin\Debug\net8.0\HtmlAgilityPack.dll
 C:\Users\Asus\Desktop\Test\obj\Debug\net8.0\Test.csproj.AssemblyReference.cache
 C:\Users\Asus\Desktop\Test\obj\Debug\net8.0\Test.csproj.Up2Date
 C:\Users\Asus\Desktop\Test\bin\Debug\net8.0\HtmlAgilityPack.CssSelectors.NetCore.dll
+C:\Users\Asus\Desktop\Test\obj\Debug\net8.0\Test.sourcelink.json
